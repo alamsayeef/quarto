@@ -29,8 +29,8 @@ format:
     ref-hyperlink: T
 ---
 
-```{r libs, echo=F}
-librarian::shelf(tidyverse, dagitty, ggdag, ggplot2, quiet = T)
+```{r libs, include=F}
+librarian::shelf(tidyverse, dagitty, ggdag, ggplot2, gt, sjPlot, stargazer, quiet = T)
 ```
 
 ## Introduction
@@ -45,7 +45,17 @@ and even a comprehensive meta-analysis [@wijarnpreecha2018cigarette]
 
 ## Methods
 
+### Data
+
 A synthetic data has been generated using the HUNT 4 samples as reference. The outcome variable is the occurrence of celiac disease assessed by positive serological or biopsy results. The exposure of interest in the study was the smoking status of the individual. Socio-economic factors such as age and sex were considered with behavioral factors such as alcohol and coffee consumption as confounding between the exposure and outcome.
+
+### Case control study design
+
+### Directed Acyclic Graphs
+
+### Statistical Analysis
+
+blah blah blah
 
 ```{r generate_data, echo=F}
 # generate synthetic vectors ----
@@ -140,15 +150,18 @@ write.csv(
 
 ## Results
 
-```{r ac1, echo=F}
+```{r import, echo=F}
 # analysis ----
 # import the data
 cscrtldata = read.csv("C:/Users/mohasal/OneDrive - NTNU/Courses/SMED8002/syndata.csv")
 ```
 
-```{r, echo=FALSE}
-#| label: dag
-#| fig-cap: "Figure 1: Directed Acyclic Graph"
+
+
+```{r dag, echo=FALSE}
+#| label: fig-dag
+#| fig-cap: "Directed Acyclic Graph"
+#| layout-align: center
 
 # make a DAG diagram
 dag_diag = dagify(
@@ -178,17 +191,37 @@ ggdag_parents(dag_diag, "smoking", text = FALSE, use_labels = "label") +
   )
 ```
 
-To refer @dag do as the code suggest.
+To refer @fig-dag do as the code suggest.
 
-Descriptive table
-```{r ac2, echo=F}
+Descriptive table, To refer @tbl-table1 do as the code suggest.
 
+```{r table1, echo=F}
+#| label: tbl-table1
+#| tbl-cap: "Distribution of smokers among CD sample"
+#| layout-align: right
+
+tab_xtab(
+  cscrtldata$celiac,
+  cscrtldata$smoking,
+  var.labels = c("Celiac disease", "Smoking status"),
+  show.row.prc = T,
+  show.col.prc = T
+)
 ```
 
-Relative risk table
+Relative risk table refer @tbl-table2 do as the code suggest.
 
-```{r ac3, echo=F}
-
+```{r table2, echo=F}
+#| label: tbl-table2
+#| tbl-cap: "Example"
+tab_xtab(
+  title = "Distribution of alcohol consumption among different sex",
+  cscrtldata$sex,
+  cscrtldata$alcohol,
+  var.labels = c("Sex", "Alcohol consumption"),
+  show.row.prc = T,
+  show.col.prc = T
+)
 ```
 
 ## Discussion
