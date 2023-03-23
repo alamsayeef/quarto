@@ -4,9 +4,9 @@ subtitle: "Spring 2023 Obligatory Assignment; SMED8002 Epidemiology II; "
 date: 2023-03-20
 date-format: long
 author: 
-  - name: Author1
-  - name: Author1
-  - name: Author1
+  - name: Alya Ghina Aqila Arham
+  - name: Fikria Karinanur
+  - name: Jonas Grevle Hofmo
   - name: Mohammad Sayeef Alam
 
 toc: true
@@ -36,9 +36,12 @@ librarian::shelf(tidyverse, dagitty, ggdag, ggplot2, quiet = T)
 ## Introduction
 
 
-Celiac disease (CD) has become globally common in all age groups [@vilppula2009increasing], especially among Caucasian populations who are genetically predisposed. While the global prevalence of CD is around 1% [@singh2018global], some Nordic populations have recorded higher than global average numbers [@vilppula2009increasing; @kvamme2022population; @dydensborg2012increasing; @myleus2009celiac]. In fact, only about one in every hundred people from the Western countries eventually develop the disease even though the consumption of gluten is remarkably high.
+Celiac disease (CD) has become globally common in all age groups [@vilppula2009increasing], especially among Caucasian populations who are genetically predisposed. The prevalence of CD has significantly increased over the past 50 years and in the northern Europe it is prevalent among 1-2% of the population [@lohi2007increasing]. While the global prevalence of CD is around 1% [@singh2018global], some Nordic populations have recorded higher than global average numbers [@vilppula2009increasing; @kvamme2022population; @dydensborg2012increasing; @myleus2009celiac]. 
 
-The prevalence of CD has significantly increased over the past 50 years and in the northern Europe it is prevalent among 1-2% of the population [@lohi2007increasing].
+In fact, only about one in every hundred people from the Western countries eventually develop the disease even though the consumption of gluten is remarkably high. This could be due to three reasons: 1) the genetic variation in the population is huge or else the samples are selectively chosen as per study requirements; 2) availability of highly accurate screening methods are still not at par and finally 3) there might be some environmental factors which affects the disease.
+
+Several studies have indicated CD to be associated significantly with environmental factors such as short breastfeeding [@akobeng2006effect], caesarean delivery [@maarild2012pregnancy], childhood infections [@stene2006rotavirus] etc. However, individual studies [@snook1996adult;@vazquez2001relation] 
+and even a comprehensive meta-analysis [@wijarnpreecha2018cigarette]
 
 ## Methods
 
@@ -184,7 +187,7 @@ Descriptive table
 
 Relative risk table
 
-```{r ac2, echo=F}
+```{r ac3, echo=F}
 
 ```
 

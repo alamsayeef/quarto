@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alya Ghina Aqila Arham">
+<meta name="author" content="Fikria Karinanur">
+<meta name="author" content="Jonas Grevle Hofmo">
+<meta name="author" content="Mohammad Sayeef Alam">
+<meta name="dcterms.date" content="2023-03-20">
+
+<title>Effect of smoking on celiac disease: results from a synthetic case-control population</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="Assignment_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Assignment_files/libs/quarto-html/quarto.js"></script>
+<script src="Assignment_files/libs/quarto-html/popper.min.js"></script>
+<script src="Assignment_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Assignment_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Assignment_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Assignment_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Assignment_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Assignment_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Assignment_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">1</span>  Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="toc-section-number">2</span>  Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="toc-section-number">3</span>  Results</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="toc-section-number">4</span>  Discussion</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Effect of smoking on celiac disease: results from a synthetic case-control population</h1>
+<p class="subtitle lead">Spring 2023 Obligatory Assignment; SMED8002 Epidemiology II;</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alya Ghina Aqila Arham </p>
+             <p>Fikria Karinanur </p>
+             <p>Jonas Grevle Hofmo </p>
+             <p>Mohammad Sayeef Alam </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>Celiac disease (CD) has become globally common in all age groups <span class="citation" data-cites="vilppula2009increasing">(<a href="#ref-vilppula2009increasing" role="doc-biblioref">Vilppula et al., 2009</a>)</span>, especially among Caucasian populations who are genetically predisposed. The prevalence of CD has significantly increased over the past 50 years and in the northern Europe it is prevalent among 1-2% of the population <span class="citation" data-cites="lohi2007increasing">(<a href="#ref-lohi2007increasing" role="doc-biblioref">Lohi et al., 2007</a>)</span>. While the global prevalence of CD is around 1% <span class="citation" data-cites="singh2018global">(<a href="#ref-singh2018global" role="doc-biblioref">Singh et al., 2018</a>)</span>, some Nordic populations have recorded higher than global average numbers <span class="citation" data-cites="vilppula2009increasing kvamme2022population dydensborg2012increasing myleus2009celiac">(<a href="#ref-dydensborg2012increasing" role="doc-biblioref">Dydensborg et al., 2012</a>; <a href="#ref-kvamme2022population" role="doc-biblioref">Kvamme et al., 2022</a>; <a href="#ref-myleus2009celiac" role="doc-biblioref">Myléus et al., 2009</a>; <a href="#ref-vilppula2009increasing" role="doc-biblioref">Vilppula et al., 2009</a>)</span>.</p>
+<p>In fact, only about one in every hundred people from the Western countries eventually develop the disease even though the consumption of gluten is remarkably high. This could be due to three reasons: 1) the genetic variation in the population is huge or else the samples are selectively chosen as per study requirements; 2) availability of highly accurate screening methods are still not at par and finally 3) there might be some environmental factors which affects the disease.</p>
+<p>Several studies have indicated CD to be associated significantly with environmental factors such as short breastfeeding <span class="citation" data-cites="akobeng2006effect">(<a href="#ref-akobeng2006effect" role="doc-biblioref">Akobeng et al., 2006</a>)</span>, caesarean delivery <span class="citation" data-cites="maarild2012pregnancy">(<a href="#ref-maarild2012pregnancy" role="doc-biblioref">Mårild et al., 2012</a>)</span>, childhood infections <span class="citation" data-cites="stene2006rotavirus">(<a href="#ref-stene2006rotavirus" role="doc-biblioref">Stene et al., 2006</a>)</span> etc. However, individual studies <span class="citation" data-cites="snook1996adult vazquez2001relation">(<a href="#ref-snook1996adult" role="doc-biblioref">Snook et al., 1996</a>; <a href="#ref-vazquez2001relation" role="doc-biblioref">Vazquez et al., 2001</a>)</span> and even a comprehensive meta-analysis <span class="citation" data-cites="wijarnpreecha2018cigarette">(<a href="#ref-wijarnpreecha2018cigarette" role="doc-biblioref">Wijarnpreecha et al., 2018</a>)</span></p>
+</section>
+<section id="methods" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="methods"><span class="header-section-number">2</span> Methods</h2>
+<p>A synthetic data has been generated using the HUNT 4 samples as reference. The outcome variable is the occurrence of celiac disease assessed by positive serological or biopsy results. The exposure of interest in the study was the smoking status of the individual. Socio-economic factors such as age and sex were considered with behavioral factors such as alcohol and coffee consumption as confounding between the exposure and outcome.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="results"><span class="header-section-number">3</span> Results</h2>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Assignment_files/figure-html/dag-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 1: Directed Acyclic Graph</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>To refer <span class="citation" data-cites="dag">(<a href="#ref-dag" role="doc-biblioref"><strong>dag?</strong></a>)</span> do as the code suggest.</p>
+<p>Descriptive table</p>
+<div class="cell">
+
+</div>
+<p>Relative risk table</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="discussion" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="discussion"><span class="header-section-number">4</span> Discussion</h2>
+<p>There are sufficient evidence that environmental exposures increases the risk of celiac disease.</p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-akobeng2006effect" class="csl-entry" role="doc-biblioentry">
+Akobeng, A. K., Ramanan, A. V., Buchan, I., &amp; Heller, R. F. (2006). Effect of breast feeding on risk of coeliac disease: A systematic review and meta-analysis of observational studies. <em>Archives of Disease in Childhood</em>, <em>91</em>(1), 39–43.
+</div>
+<div id="ref-dydensborg2012increasing" class="csl-entry" role="doc-biblioentry">
+Dydensborg, S., Toftedal, P., Biaggi, M., Lillevang, S. T., Hansen, D. G., &amp; Husby, S. (2012). Increasing prevalence of coeliac disease in denmark: A linkage study combining national registries. <em>Acta Paediatrica</em>, <em>101</em>(2), 179–184.
+</div>
+<div id="ref-kvamme2022population" class="csl-entry" role="doc-biblioentry">
+Kvamme, J.-M., Sørbye, S., Florholmen, J., &amp; Halstensen, T. S. (2022). Population-based screening for celiac disease reveals that the majority of patients are undiagnosed and improve on a gluten-free diet. <em>Scientific Reports</em>, <em>12</em>(1), 12647.
+</div>
+<div id="ref-lohi2007increasing" class="csl-entry" role="doc-biblioentry">
+Lohi, S., Mustalahti, K., Kaukinen, K., Laurila, K., Collin, P., Rissanen, H., Lohi, O., Bravi, E., Gasparin, M., Reunanen, A., et al. (2007). Increasing prevalence of coeliac disease over time. <em>Alimentary Pharmacology &amp; Therapeutics</em>, <em>26</em>(9), 1217–1225.
+</div>
+<div id="ref-maarild2012pregnancy" class="csl-entry" role="doc-biblioentry">
+Mårild, K., Stephansson, O., Montgomery, S., Murray, J. A., &amp; Ludvigsson, J. F. (2012). Pregnancy outcome and risk of celiac disease in offspring: A nationwide case-control study. <em>Gastroenterology</em>, <em>142</em>(1), 39–45.
+</div>
+<div id="ref-myleus2009celiac" class="csl-entry" role="doc-biblioentry">
+Myléus, A., Ivarsson, A., Webb, C., Danielsson, L., Hernell, O., Högberg, L., Karlsson, E., Lagerqvist, C., Norström, F., Rosén, A., et al. (2009). Celiac disease revealed in 3% of swedish 12-year-olds born during an epidemic. <em>Journal of Pediatric Gastroenterology and Nutrition</em>, <em>49</em>(2), 170–176.
+</div>
+<div id="ref-singh2018global" class="csl-entry" role="doc-biblioentry">
+Singh, P., Arora, A., Strand, T. A., Leffler, D. A., Catassi, C., Green, P. H., Kelly, C. P., Ahuja, V., &amp; Makharia, G. K. (2018). Global prevalence of celiac disease: Systematic review and meta-analysis. <em>Clinical Gastroenterology and Hepatology</em>, <em>16</em>(6), 823–836.
+</div>
+<div id="ref-snook1996adult" class="csl-entry" role="doc-biblioentry">
+Snook, J., Dwyer, L., Lee-Elliott, C., Khan, S., Wheeler, D., &amp; Nicholas, D. (1996). Adult coeliac disease and cigarette smoking. <em>Gut</em>, <em>39</em>(1), 60–62.
+</div>
+<div id="ref-stene2006rotavirus" class="csl-entry" role="doc-biblioentry">
+Stene, L. C., Honeyman, M. C., Hoffenberg, E. J., Haas, J. E., Sokol, R. J., Emery, L., Taki, I., Norris, J. M., Erlich, H. A., Eisenbarth, G. S., et al. (2006). Rotavirus infection frequency and risk of celiac disease autoimmunity in early childhood: A longitudinal study. <em>Official Journal of the American College of Gastroenterology| ACG</em>, <em>101</em>(10), 2333–2340.
+</div>
+<div id="ref-vazquez2001relation" class="csl-entry" role="doc-biblioentry">
+Vazquez, H., Smecuol, E., Flores, D., Mazure, R., Pedreira, S., Niveloni, S., Maurino, E., &amp; Bai, J. C. (2001). Relation between cigarette smoking and celiac disease: Evidence from a case-control study. <em>The American Journal of Gastroenterology</em>, <em>96</em>(3), 798–802.
+</div>
+<div id="ref-vilppula2009increasing" class="csl-entry" role="doc-biblioentry">
+Vilppula, A., Kaukinen, K., Luostarinen, L., Krekelä, I., Patrikainen, H., Valve, R., Mäki, M., &amp; Collin, P. (2009). Increasing prevalence and high incidence of celiac disease in elderly people: A population-based study. <em>BMC Gastroenterology</em>, <em>9</em>(1), 1–5.
+</div>
+<div id="ref-wijarnpreecha2018cigarette" class="csl-entry" role="doc-biblioentry">
+Wijarnpreecha, K., Lou, S., Panjawatanan, P., Cheungpasitporn, W., Pungpapong, S., Lukens, F. J., &amp; Ungprasert, P. (2018). Cigarette smoking and risk of celiac disease: A systematic review and meta-analysis. <em>United European Gastroenterology Journal</em>, <em>6</em>(9), 1285–1293.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
