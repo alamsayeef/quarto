@@ -1,5 +1,175 @@
 ---
-title: "HUNT Forskningslunsj"
-author: "Mohammad Sayeef Alam"
-format: revealjs
+title: Statisitcal testing vs Estimation
+subtitle: "Chapter 8: Random Error and the Role of Statistics"
+description: HUNT Forskningslunsj
+footer: https://github.com/alamsayeef/quarto/tree/main/presentations
+author: 
+  - name: Mohammad Sayeef Alam
+    affliation:
+      - name: K. G. Jebsen Center for Genetic Epidemiology and HUNT Research Center
+        address: NTNU, Trondheim
+date: 2023-03-31
+date-format: long
+toc-title: Contents
+toc: true
+format: 
+  revealjs:
+    chalkboard: true
+    logo: HUNTlogo.png
+    theme: serif
+    slide-number: c/t
+    incremental: true
 ---
+
+## p-value functions
+
+*   A.k.a. Confidence interval function
+*   p-value is compatibility between data and H0
+*   RR lies [0,$\infty$]
+*   If outcome is negative: 
+    +   RR < 1 indicates lower risk
+    +   RR > 1 indicates higher risk
+*   Hypothesis testing on multiple values
+*   p-values corresponding for each RR generates a **p-value function**
+
+
+:::{.notes}
+-   aka confidence interval function
+-   The p-value is a statistic that can be viewed as a measure of the compatibility between the data in hand and the null hypothesis.
+-   Any rate ratio measure is taken which ranges between 0 - infinity, our H0 is RR = 1, i.e. no effect of exposure on outcome. (If it would have been a negative outcome, RR < 1 would indicate protective effect/lower risk and RR > 1 indicates higher risk)
+-   What if we could test for multiple H0 hypotheses
+-   calculate an infinite number of p-values that test every possible value of RR leads to generation of a p-value function
+:::
+	
+## Example 1
+
+Case-control study of drug exposure during pregnancy and congenital heart disease.
+
+```{r lib, echo=F, include=F, warning=F}
+librarian::shelf(fmsb, pvaluefunctions)
+```
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r df1, echo=F}
+df1 = as.data.frame(matrix(c(4, 386, 4, 1250), 2, 2), row.names = c("Cases", "Controls"))
+print(df1)
+```
+:::
+
+::: {.column width="60%"}
+```{r cc1, echo=F}
+p1 = pvalueplot(matrix(c(4, 386, 4, 1250), 2, 2), xrange=c(0.1, 30), plot.OR = T)
+```
+:::
+
+::::
+
+:::{.notes}
+-   Resembles a Tepee [image]
+-   Table & figure
+-   p-value = 1 is the location where the data is most compatible with the estimate; RR = 3.2
+-   The curve provides a quantitative overview of the statistical relation between exposure and disease.
+-   degree of precision of the estimate, which is indicated by the narrowness or the breadth of the tepee.
+-   when we see the p-value for RR = 1 we observe it to be 0.08, meaning there is no statistically significant association between exposure and outcome.
+-   Hold up! what? this is very confusing when understanding it in a reverse fashion.
+-   What if our p-value was 0.02, we would have rejected the H0 and said there is statistical significance between the effect of exposure and outcome.
+-     In other words,
+		    when p-value < 0.05: Reject H0 and accept H1
+		    when p-value > 0.05: Reject H1 and accept H0
+-   The p-value for RR = 1 is identical to the p-value for RR = 10.5, so
+there is no reason to prefer the interpretation of RR = 1 over the interpretation
+that RR = 10.5.
+-   Better than both is the choice of RR = 3.2
+-   Take away is that p-value can be gravely misleading !sometimes!
+:::
+
+## Example 2
+
+Hypothetical case-control data
+
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r df2, echo=F}
+df2 = as.data.frame(matrix(c(1090, 14910, 1000, 15000), 2, 2), col.names= c("With exposure", "Without exposure"), row.names = c("Cases", "Controls"))
+print(df2)
+```
+:::
+
+::: {.column width="60%"}
+```{r cc2, echo=F, warning=F}
+p2 = pvalueplot(matrix(c(1090, 14910, 1000, 15000), 2, 2), xrange=c(0.1, 2), plot.OR = T)
+```
+:::
+
+::::
+
+
+:::{.notes}
+-   The graph clearly indicates that there is no strong effect btw exposure and outcome
+-   Yet due to p-value being 0.04 we reject the H0: RR = 1 and say that there is statistical evidence of a significant effect between the exposure and outcome.
+-   Interpretation of data purely based on significance testing would be indicative of one's perverse behaviour.
+-   p-value function provides a quantitative visual message about the size of the effect.
+-   Strength = Location; Precision = 1/Spread
+-   One number does not explain two quantities
+:::
+
+## CI
+
+:::{.notes}
+-   The LCL and UCL act as the indicators of precision
+-   Very uncommon to see a full p-valu function/plot but pretty common to have CI in epidemiological studies
+-   Depending upon your tolerance you can choose the CI to be between 80%, 90%, 95% or even 99%
+-   Surrogate for statistical significance; rather should be viewed as counterpart of p-value function
+-   Should be interpreted as how well the data and estimate agree with each other.
+:::
+
+## Problems
+
+Example 1
+
+---
+
+Example 2
+
+---
+
+Example 3
+
+## Formulas for calculations
+
+-   Incident Rate Difference (RD)
+-   CI % | z value
+    
+    90	  1.645
+    
+    95	  1.96
+    
+    99	  2.57
+
+-   Considering a 90% CI
+		RDl,RDu = RD +- 1.645*SD; applicable to any measure of difference
+-   When it comes to ratios, the measures usually tend to be assymetrically towards larger values; to counter it, we log transform.
+		ln(RDl),ln(RDu) = ln(RD) +- 1.645*ln(SD)
+-   Since these are in logarithmic scale after calculation we need to revert back to original values by exponentiating it with the base of nature logarithm
+		RDl,RDu = e^(ln(RD) +- 1.645*ln(SD))
+
+:::{.notes}
+
+:::
+
+## Take home message
+
+-   p-value superfical, sophisticated application of quantitative method with only a qualitative proposition
+-   "Significant" or "Not significant" provides no quantitative clue about the size of the effect
+-   Lack of significance DOES NOT imply lack of effect or Significance DOES NOT imply "proof" of effect either
+-   Non chance causation alt theories: confounding, non differential classification (selection/measurement bias).
+-   When one arrives at insignificant results one should definitely probe deeper for associations missed by chance due to reasons mentioned above
+-   Confidence limits should be gray areas used to mentally picture the p-value function and hence the agreement btw data and estimate.
+
+## Tusen takk {background-color="#447099" .unlisted}
+
+Håper å sende deg hjem med mindre forvirring enn du kom i morgen :) 
+
+Beklager hvis det er noe annet :(
